@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link rel="icon" href="../tab_icon.png">
+
+    <link rel="stylesheet" href="about style.css">
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        /* Close when someone clicks on the "x" symbol inside the overlay */
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+        /*code of accordin in art gallery*/
+        var optart = 0;
+
+        function ope() {
+            if (!optart) {
+                document.getElementById("artnav").style.display = "block";
+                optart = 1;
+            } else {
+                document.getElementById("artnav").style.display = "none";
+                optart = 0;
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/b8be333c62.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="tnav">
+        <div class="topnav" id="myTopnav">
+
+            <a href="#;" class="icon" onclick="openNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a class="tlink" href="../contact_us/index.html">Contact us</a>
+            <a class="tlink" href="../about_us/index.html">About us</a>
+            <a class="tlink" href="../index.html">Home</a>
+
+        </div>
+        <div id="myNav" class="overlay">
+            <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="../index.html">Home</a>
+                <a href="../about_us/index.html">About</a>
+                <a href="../contact_us/index.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--content-->
+    <main>
+
+        <div class="sheet">
+            <div class="ableft ">
+                <div class="center"><img class="imagicon" src="icon.png" alt=""></div>
+            </div>
+            <div class="abright">
+                <div class="center">
+                    <h1 class="headwel">Welcome</h1>
+
+                    <p class="tejust text1">Lovely professional University cinemas... Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nesciunt vel exercitationem velit! Provident, sint excepturi. Aliquam quibusdam inventore eos fuga beatae vel repellat dolore
+                        dolorum consectetur cupiditate excepturi, aliquid ducimus ratione modi ab possimus ipsum fugiat dignissimos sint nihil et nesciunt natus! Expedita ratione ipsa a fugiat repellendus doloremque.
+                    </p>
+                    <br>
+                    <ul class="lipad text1">
+                        <li>An eye for discovery</li>
+                        <li>A taste for artistic excellence</li>
+                        <li>A spirit of exploration and innovation</li>
+                    </ul>
+                    <br></div>
+            </div>
+
+        </div>
+        <br><br><br>
+
+        <h1 class="whyhy">Our Team</h1>
+        <div class="sheet">
+            <div class="ableft">
+                <div class="center">
+                    <div class="cflx">
+                        <img class="photeam" src="../images/team1.jpg" alt="">
+                        <h1 class="namteam">Jani Pasha</h1>
+                        <h3 class="desteam">Director and Founder</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="abright">
+                <div class="center">
+                    <div class="cflx">
+                        <img class="photeam" src="../images/team2.jpg" alt="">
+                        <h1 class="namteam">ZAI KUMAR</h1>
+                        <h3 class="desteam">Working Partner</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </main>
+</body>
+
+</html>

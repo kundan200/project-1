@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Management System</title>
+    <link rel="icon" href="tab_icon.png">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/b8be333c62.js" crossorigin="anonymous"></script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav id="tnav">
+        <div class="topnav" id="myTopnav">
+
+            <a href="#;" class="icon" onclick="openNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a class="tlink" href="contact_us/index.html">Contact us</a>
+            <a class="tlink" href="about_us/index.html">About us</a>
+            <a class="tlink" href="index.html">Home</a>
+
+        </div>
+        <div id="myNav" class="overlay">
+            <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about_us/index.html">About</a>
+                <a href="contact_us/index.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="images/8.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/9.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/12.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            setInterval(function() {
+                plusSlides(-1);
+            }, 4000);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+        <div class="total-div">
+            <div>
+                <div class="side-nav">
+                    <div>
+                        <form>
+                            <h3 for="cinema" class="tnorwei">Choose a cinema:</h3>
+                            <select class="select" id="cinema" name="cinema">
+                        <option selected>Cinemas</option>
+                        <option value="Vakeel Saab" >Vakeel Saab</option>
+                        <option value="girl on the train">girl on the train</option>
+                        <option value="Rang de">Rang de</option>
+                        <option value="panga">panga</option>
+                        </select>
+                            <br><br>
+                            <h3 for="timings" class="tnorwei">Choose a Timings:</h3>
+                            <select class="select" id="timings" name="timings">
+                        <option selected>Timings</option>
+                        <option value="11:00 AM" >11:00 AM</option>
+                        <option value="02:10 AM">2:10 PM</option>
+                        <option value="06:20 AM">6:20 PM</option>
+                        <option value="09:30 AM">9:30 PM</option>
+                        </select><br><br>
+                            <input type="submit" value="Book Now">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function movie(input) {
+                    var no;
+                    no = input;
+                    switch (no) {
+                        case 1:
+                            document.getElementById("vakeelsaab").style.display = "block";
+                            document.getElementById("girlonthetrain").style.display = "none";
+                            document.getElementById("Rangde").style.display = "none";
+                            document.getElementById("panga").style.display = "none";
+                            document.getElementById("mov-gen").style.display = "none";
+                            break;
+                        case 2:
+                            document.getElementById("vakeelsaab").style.display = "none";
+                            document.getElementById("girlonthetrain").style.display = "block";
+                            document.getElementById("Rangde").style.display = "none";
+                            document.getElementById("panga").style.display = "none";
+                            document.getElementById("mov-gen").style.display = "none";
+                            break;
+                        case 3:
+                            document.getElementById("vakeelsaab").style.display = "none";
+                            document.getElementById("girlonthetrain").style.display = "none";
+                            document.getElementById("Rangde").style.display = "block";
+                            document.getElementById("panga").style.display = "none";
+                            document.getElementById("mov-gen").style.display = "none";
+                            break;
+                        case 4:
+                            document.getElementById("vakeelsaab").style.display = "none";
+                            document.getElementById("girlonthetrain").style.display = "none";
+                            document.getElementById("Rangde").style.display = "none";
+                            document.getElementById("panga").style.display = "block";
+                            document.getElementById("mov-gen").style.display = "none";
+                            break;
+
+                    }
+                }
+            </script>
+            <div class="main-div">
+                <div class="movie-details">
+                    <div id="mov-gen">
+                        <h1>Movie Title</h1>
+                        <p>Discreption of the movie</p>
+                        <p><b>Director:</b> </p>
+                        <p><b>Writers:</b> </p>
+                        <p><b>Stars:</b> </p>
+                        <p>(click on the movie image to view it's details)</p>
+                    </div>
+                    <div id="vakeelsaab">
+                        <h1>Vakeel saab</h1>
+                        <p>Drama film centers on the life of a criminal lawyer.</p>
+                        <p><b>Director:</b> Venu Sriram</p>
+                        <p><b>Writers:</b> Venu Sriram, Mamidala Thirupathi (dialogue)</p>
+                        <p><b>Stars:</b> Pawan Kalyan, Nivetha Thomas, Anjali</p>
+                    </div>
+                    <div id="girlonthetrain">
+                        <h1>Girl on the train</h1>
+                        <p>The story follows a recent divorcee who spends her daily commute fantasizing about a seemingly perfect couple who live in a house that her train passes daily, but something shocking happens there one day.</p>
+                        <p><b>Director:</b>Ribhu Dasgupta</p>
+                        <p><b>Writers:</b> Gaurav Shukla (dialogue by), Ribhu Dasgupta (screenplay) </p>
+                        <p><b>Stars:</b> Aditi Rao Hydari, Parineeti Chopra, Kirti Kulhari </p>
+                    </div>
+                    <div id="Rangde">
+                        <h1>Rang de</h1>
+                        <p>A man and woman have been neighbors since they were children, but they have different perspectives on their relationship.</p>
+                        <p><b>Director:</b> Venky Atluri</p>
+                        <p><b>Writers:</b> Venky Atluri, P. Sathish Chandra </p>
+                        <p><b>Stars:</b> Abhinav Gomatam, Ronit Kamra, Vennela Kishore </p>
+                    </div>
+                    <div id="panga">
+                        <h1>Panga</h1>
+                        <p>Panga is inspired from the life of a national level Kabbadi player from India. It follows her triumphs, struggle and overcoming of stereotypes. It shows how important the love and support of your family is for you to be successful.</p>
+                        <p><b>Director:</b>Ashwiny Iyer Tiwari</p>
+                        <p><b>Writers:</b> Nikhil Mehrotra, Ashwiny Iyer Tiwari </p>
+                        <p><b>Stars:</b> Kangana Ranaut, Jassie Gill, Richa Chadha</p>
+                    </div>
+                </div>
+                <div class="exhibition-page">
+                    <h1 class="centext titsho">Movies</h1>
+                    <div class="movshow">
+                        <div class="card a1" onclick="movie(1)"><img class="porimg ishad" src="images/14.jpg" alt="vakeel sabb"></div>
+                        <div class="card a2" onclick="movie(2)"><img class="porimg ishad" src="images/13.jpg" alt="The girl on the train"></div>
+                        <div class="card a3" onclick="movie(3)"><img class="porimg ishad" src="images/11.jpg" alt="rang de"></div>
+                        <div class="card a4" onclick="movie(4)"><img class="porimg ishad" src="images/10.jpg" alt="Panga"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+    <br><br><br><br>
+</body>
+
+</html>

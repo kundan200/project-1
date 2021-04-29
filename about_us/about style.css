@@ -1,0 +1,472 @@
+body {
+    overflow-x: hidden;
+    width: 100%;
+    font-family: calibri;
+    background-color: #191919;
+    color: #f1f1f1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    background-image: linear-gradient(rgb(19, 19, 19), rgba(19, 19, 19, 0.158));
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 101;
+    font-family: calibri;
+}
+
+.topnav {
+    padding: 0px 18px;
+    background-color: transparent;
+    overflow: hidden;
+    height: 9vh;
+    width: 100%;
+    color: #f1f1f1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: calibri;
+}
+
+.topnav .tlink {
+    float: right;
+    display: block;
+    color: inherit;
+    text-align: center;
+    padding: 1vh 3vh 1vh 0px;
+    text-decoration: none;
+    font-size: 5vh;
+}
+
+.navlogobar {
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.navlogo {
+    padding: 1vh 1vh;
+    height: 9vh;
+}
+
+.topnav .icon {
+    color: inherit;
+    float: right;
+    display: none;
+    font-size: 6vh;
+    padding: 2vh;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    padding-top: 1vh;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    padding-top: 50px;
+    position: relative;
+    top: 10vh;
+    width: 100%;
+    padding-left: 7.5%;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 4vh;
+    color: #e0e0e0;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover {
+    color: #fff;
+}
+
+.overlay .closebtn {
+    margin: 9px;
+    position: absolute;
+    top: 3vh;
+    right: 3vh;
+    font-size: 50px;
+}
+
+#artnav {
+    margin: 0px;
+    display: none;
+    padding-left: 25px;
+}
+
+@media screen and (orientation: portrait) {
+    .topnav {
+        padding: 0px 12px;
+        height: 7.5vh;
+    }
+    .topnav .tlink {
+        padding: 1.25vh 1.5vh;
+        font-size: 4.5vh;
+    }
+    .navlogo {
+        padding: 1vh 1vh;
+        height: 7vh;
+    }
+    .topnav .icon {
+        font-size: 4vh;
+        padding: 1.5vh;
+    }
+    .overlay {
+        padding-top: 1vh;
+        transition: 0.5s;
+    }
+    .overlay-content {
+        position: relative;
+        top: 12vh;
+        width: 100%;
+        padding-left: 7.5%;
+    }
+    .overlay a {
+        text-decoration: none;
+        font-size: 4vh;
+        color: #e0e0e0;
+        display: block;
+        transition: 0.3s;
+    }
+    .overlay a:hover {
+        color: #fff;
+    }
+    .overlay .closebtn {
+        position: absolute;
+        top: 6vh;
+        right: 3vh;
+        font-size: 50px;
+        line-height: 50px;
+    }
+    #artnav {
+        margin: 0px;
+        display: none;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 900px),
+(orientation: portrait) {
+    .topnav {
+        padding: 0px 8px;
+    }
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+.sheet {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.abright {
+    display: flex;
+    width: 55vw;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.sheet .abright {
+    width: 45vw;
+}
+
+.center {
+    width: auto;
+    height: auto;
+    padding: 5%;
+}
+
+.headwel {
+    text-align: center;
+    font-size: 12vh;
+    padding: 5px 0px;
+}
+
+.tejust {
+    text-align: justify;
+}
+
+.text1 {
+    font-size: 3.25vh;
+}
+
+.text2 {
+    font-size: 5vh;
+}
+
+.lipad {
+    padding: 0px 10%;
+}
+
+.ableft {
+    display: flex;
+    width: 40vw;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.imagicon {
+    width: 35vw;
+}
+
+.whyhy {
+    text-align: center;
+    font-size: 8vh;
+    padding: 5px 0px;
+}
+
+.cflx {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.photeam {
+    width: 300px;
+    height: 300px;
+    border: #FFF solid 2.5px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.namteam {
+    text-align: center;
+    font-size: 5vh;
+}
+
+.desteam {
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+main {
+    padding-top: 10vh;
+    margin: 0px;
+}
+
+@media screen and (orientation: portrait) {
+    main {
+        padding-top: 8vh;
+        margin: 0px;
+    }
+    .headwel {
+        font-size: 8vh;
+    }
+    .sheet {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+        padding-top: 0px;
+    }
+    .abright {
+        width: 90vw;
+        height: auto;
+    }
+    .ableft {
+        width: 90vw;
+        height: auto;
+    }
+    .imagicon {
+        width: 80vw;
+    }
+    .whyhy {
+        font-size: 6vh;
+    }
+    .mivitex {
+        font-size: 4vh;
+    }
+    .text2 {
+        font-size: 3.3vh;
+    }
+}
+
+.cont {
+    width: 100%;
+    height: auto;
+    padding: 2vh 4vw;
+    background-color: black;
+}
+
+.cotit {
+    font-size: 3em;
+    text-align: center;
+    color: white;
+}
+
+.codet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.conflex {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.icoon {
+    font-size: 1.8em;
+    color: #fff;
+    margin: 0px 5px;
+}
+
+.cotexxt {
+    color: #fff;
+    font-size: 1.8em;
+}
+
+.bodet {
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: 5px solid white;
+    margin: 15px;
+    width: 450px;
+    border-radius: 50px;
+}
+
+a[href^=tel] {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 550px) {
+    .cotit {
+        font-size: 3em;
+    }
+    .conflex {
+        margin: 10px;
+    }
+    .icoon {
+        font-size: 25px;
+    }
+    .cotexxt {
+        font-size: 25px;
+    }
+    .bodet {
+        border: 3.5px solid white;
+        margin: 6px 0px;
+        width: 415px;
+        border-radius: 35px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cotit {
+        font-size: 2.5em;
+    }
+    .conflex {
+        margin: 6px;
+    }
+    .icoon {
+        font-size: 20px;
+    }
+    .cotexxt {
+        font-size: 20px;
+    }
+    .bodet {
+        border: 3.5px solid white;
+        margin: 5px 0px;
+        width: 315px;
+        border-radius: 30px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .cotit {
+        font-size: 2.25em;
+    }
+    .conflex {
+        margin: 4px;
+    }
+    .icoon {
+        font-size: 14px;
+    }
+    .cotexxt {
+        font-size: 14px;
+    }
+    .bodet {
+        border: 3.5px solid white;
+        margin: 5px 0px;
+        width: 225px;
+        border-radius: 25px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .cotit {
+        font-size: 2em;
+    }
+    .conflex {
+        margin: 2px;
+    }
+    .icoon {
+        font-size: 10px;
+    }
+    .cotexxt {
+        font-size: 10px;
+    }
+    .bodet {
+        border: 3.5px solid white;
+        margin: 5px 0px;
+        width: 150px;
+        border-radius: 25px;
+    }
+}

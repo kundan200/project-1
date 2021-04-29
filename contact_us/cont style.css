@@ -1,0 +1,296 @@
+body {
+    overflow-x: hidden;
+    width: 100%;
+    font-family: calibri;
+    background-color: #191919;
+    color: #f1f1f1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    background-image: linear-gradient(rgb(19, 19, 19), rgba(19, 19, 19, 0.158));
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 101;
+    font-family: calibri;
+}
+
+.topnav {
+    padding: 0px 18px;
+    background-color: transparent;
+    overflow: hidden;
+    height: 9vh;
+    width: 100%;
+    color: #f1f1f1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: calibri;
+}
+
+.topnav .tlink {
+    float: right;
+    display: block;
+    color: inherit;
+    text-align: center;
+    padding: 1vh 3vh 1vh 0px;
+    text-decoration: none;
+    font-size: 5vh;
+}
+
+.navlogobar {
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.navlogo {
+    padding: 1vh 1vh;
+    height: 9vh;
+}
+
+.topnav .icon {
+    color: inherit;
+    float: right;
+    display: none;
+    font-size: 6vh;
+    padding: 2vh;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    padding-top: 1vh;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    padding-top: 50px;
+    position: relative;
+    top: 10vh;
+    width: 100%;
+    padding-left: 7.5%;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 4vh;
+    color: #e0e0e0;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover {
+    color: #fff;
+}
+
+.overlay .closebtn {
+    margin: 9px;
+    position: absolute;
+    top: 3vh;
+    right: 3vh;
+    font-size: 50px;
+}
+
+#artnav {
+    margin: 0px;
+    display: none;
+    padding-left: 25px;
+}
+
+@media screen and (orientation: portrait) {
+    .topnav {
+        padding: 0px 12px;
+        height: 7.5vh;
+    }
+    .topnav .tlink {
+        padding: 1.25vh 1.5vh;
+        font-size: 4.5vh;
+    }
+    .navlogo {
+        padding: 1vh 1vh;
+        height: 7vh;
+    }
+    .topnav .icon {
+        font-size: 4vh;
+        padding: 1.5vh;
+    }
+    .overlay {
+        padding-top: 1vh;
+        transition: 0.5s;
+    }
+    .overlay-content {
+        position: relative;
+        top: 12vh;
+        width: 100%;
+        padding-left: 7.5%;
+    }
+    .overlay a {
+        text-decoration: none;
+        font-size: 4vh;
+        color: #e0e0e0;
+        display: block;
+        transition: 0.3s;
+    }
+    .overlay a:hover {
+        color: #fff;
+    }
+    .overlay .closebtn {
+        position: absolute;
+        top: 6vh;
+        right: 3vh;
+        font-size: 50px;
+        line-height: 50px;
+    }
+    #artnav {
+        margin: 0px;
+        display: none;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 900px),
+(orientation: portrait) {
+    .topnav {
+        padding: 0px 8px;
+    }
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+
+/*contact section style*/
+
+.contact-text {
+    text-align: center;
+    font-size: 9vh;
+    margin: 2vh 0px;
+}
+
+.contwidth {
+    width: 45%;
+}
+
+.form {
+    color: #f3f3f3;
+    background-color: #313131;
+    padding: 12px;
+    border: 0px solid #ccc;
+    font-size: 1.25em;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    width: 100%;
+    resize: vertical;
+}
+
+#fname {
+    width: 48%;
+}
+
+#fmail {
+    float: right;
+    width: 48%;
+}
+
+input[type=submit] {
+    font-size: 18px;
+    padding: 10px;
+    color: #f1f1f1;
+    background-color: transparent;
+    border: 2px solid #f1f1f1;
+    transition: 0.3s linear;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    color: #191919;
+    background-color: #f1f1f1;
+    border: 2px solid #f1f1f1;
+    outline: none;
+    cursor: pointer;
+}
+
+ ::placeholder {
+    color: #a3a3a3;
+    opacity: 1;
+    font-size: 1em;
+}
+
+ :-ms-input-placeholder {
+    color: #a3a3a3;
+    font-size: 1em;
+}
+
+ ::-ms-input-placeholder {
+    color: #a3a3a3;
+    font-size: 1em;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.cont-text {
+    font-size: 4vh;
+}
+
+
+/*contact media*/
+
+@media only screen and (max-width: 1024px) {
+    .contwidth {
+        width: 95%;
+    }
+    .phone-col {
+        flex-direction: column;
+    }
+    .contact-text {
+        font-size: 6vh;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width:1024px) and (orientation: landscape) {
+    .contwidth {
+        width: 45% !important;
+    }
+    .phone-col {
+        flex-direction: row !important;
+    }
+}
